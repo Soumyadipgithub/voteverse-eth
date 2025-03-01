@@ -27,8 +27,8 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       output: {
         manualChunks: {
-          react: ['react', 'react-dom'],
-          web3: ['@web3-react/core', '@web3-react/injected-connector']
+          react: ['react', 'react-dom']
+          //web3: ['@web3-react/core', '@web3-react/injected-connector']
         }
       }
     }
