@@ -88,15 +88,7 @@ const Voter = () => {
               ))}
             </div>
 
-            <div className="mt-12 text-center">
-              <Button
-                variant="outline"
-                onClick={() => navigate('/results/' + currentElection.id)}
-                className="mx-auto"
-              >
-                View Results
-              </Button>
-            </div>
+            
           </div>
         ) : (
           <div className="max-w-5xl mx-auto">
