@@ -101,13 +101,7 @@ const ElectionCard: React.FC<ElectionCardProps> = ({
                     </Link>
                   </Button>
                 )}
-                {election.status === ElectionStatus.ENDED && (
-                  <Button asChild size="sm" variant="outline">
-                    <Link to={`/results/${election.id}`}>
-                      View Results
-                    </Link>
-                  </Button>
-                )}
+                
               </div>
             )}
             <Button asChild size="sm" variant="ghost">
