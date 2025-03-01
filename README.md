@@ -1,8 +1,8 @@
-# Welcome to Your Project
+# Welcome to Our Project
 
 ## Project Info
 
-**URL**: [Our Project URL](https://voteverse-eth.vercel.app/)
+**URL**: [Live Our Project](https://voteverse-eth.vercel.app/)
 
 ## How Can I Edit This Code?
 
