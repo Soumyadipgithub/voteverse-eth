@@ -2,7 +2,7 @@
 
 ## Project Info
 
-**URL**: [Live Our Project](https://voteverse-eth.vercel.app/)
+**URL**: [Live Our Project](https://votex-two.vercel.app/)
 
 ## How Can I Edit This Code?
 
