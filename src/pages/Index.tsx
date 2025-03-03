@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import WalletConnection from '@/components/WalletConnection';
@@ -24,6 +23,7 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <header className="w-full px-4 py-6 flex justify-between items-center animate-fade-in">
         <div className="flex items-center">
+          <img src="/icon.png" alt="VoteX Logo" className="w-8 h-8 mr-2" />
           <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-votex-primary to-votex-secondary">
             VoteX
           </h1>
