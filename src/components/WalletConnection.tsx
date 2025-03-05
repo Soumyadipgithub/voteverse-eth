@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useWeb3 } from '@/context/Web3Context';
-import { Loader2 } from 'lucide-react';
+import { Loader2, ExternalLink } from 'lucide-react';
 
 // Import Wallet explicitly to avoid potential issues
 import { Wallet as WalletIcon } from 'lucide-react';
@@ -10,13 +10,20 @@ const WalletConnection: React.FC = () => {
   const {
     account,
     connectWallet,
-    loading
+    loading,
+    isMetaMaskInstalled
   } = useWeb3();
   
   const formatAddress = (address: string) => {
     return `${address.substring(0, 6)}...${address.substring(address.length - 4)}`;
   };
-  
+  const handleConnectClick = () => {
+    if (!isMetaMaskInstalled) {
+      window.open('https://metamask.io/download/', '_blank');
+    } else {
+      connectWallet();
+    }
+  };
   return (
     <div className="flex items-center space-x-2">
       {account ? (
@@ -26,7 +33,7 @@ const WalletConnection: React.FC = () => {
         </Button>
       ) : (
         <Button 
-          onClick={connectWallet} 
+          onClick={handleConnectClick}
           disabled={loading}
           className="h-10 py-2 bg-votex-primary hover:bg-votex-primary/90 text-white rounded-md shadow-button hover:shadow-button-hover button-transition"
         >
@@ -38,7 +45,8 @@ const WalletConnection: React.FC = () => {
           ) : (
             <>
               <WalletIcon className="w-4 h-4 mr-2" />
-              Connect Wallet
+               {isMetaMaskInstalled ? 'Connect Wallet' : 'Install MetaMask'}
+              {!isMetaMaskInstalled && <ExternalLink className="w-3 h-3 ml-1" />}
             </>
           )}
         </Button>
