@@ -27,8 +27,8 @@ const WalletConnection: React.FC = () => {
       ) : (
         <Button 
           onClick={connectWallet} 
-          disabled={loading} 
-          className="h-10 py-2 bg-votex-primary hover:bg-votex-primary/90 text-white rounded-md shadow-button hover:shadow-button-hover button-transition px-[22px] text-right mx-[114px]"
+          disabled={loading}
+          className="h-10 py-2 bg-votex-primary hover:bg-votex-primary/90 text-white rounded-md shadow-button hover:shadow-button-hover button-transition"
         >
           {loading ? (
             <>
